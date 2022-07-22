@@ -13,7 +13,7 @@
 
        $stm = $conexao->query($query);
         print_r($stm);
-        $resultado_da_busca = $stm->fetchAll();
+        $resultado_da_busca = $stm->fetchAll(); // Trás os registros associativos e númericos
         echo '<pre>';
         print_r($resultado_da_busca);
         echo '</pre>';
