@@ -13,10 +13,13 @@
      $senha = '';
      try{
         $conexao = new PDO($dsn, $usuario, $senha);
+        
         // Executando  intruções SQL:
         // Comandos sql:
         // Criando a tabela tb_usuarios
-        $query = '
+       
+        /*
+          $query = '
             CREATE TABLE if not exists tb_usuarios(
                 id int not null primary key auto_increment,
                 nome varchar(50) not null,
@@ -40,10 +43,24 @@
         
         $retorno = $conexao->exec($query);
         echo $retorno;
+        */
+
         // Deletando usuarios:
-       /*  $query = '
+        /*  $query = '
         delete from tb_usuarios
     '; */
+        
+    
+    // Recuperando Dados:
+    
+    $query = '
+    INSERT INTO tb_usuarios( 
+        nome, email, senha
+    )VALUES( 
+        "Lucas Nascimento", "lucastest@teste.com", "000000"
+    )
+    ';
+
     
     $retorno = $conexao->exec($query);
     echo $retorno;
