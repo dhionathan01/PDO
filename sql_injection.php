@@ -18,7 +18,9 @@
             echo '<pre>';
             print_r($usuario);
             echo '</pre>';
-
+            // Preenchendo com o seguinte trecho em senha:
+            //123456'; delete from tb_usuarios where 'a' = 'a
+            // Todos os dados em tb_usuarios foram deletados
 
         }catch(PDOException $e){
             echo 'Erro: '.$e->getCode(). ' Mensagem: '.$e->getMessage() ;
